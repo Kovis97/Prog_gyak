@@ -8,6 +8,6 @@ int main() {
 	cin >> a;
 	cout << "masodik:";
 	cin >> b;
-	cout << "Osszeguk: \t" << a+b << "\nSzorzatuk: \t" << a*b << "\nEzek kulonbsege: \t" << a*b-a+b;
+	cout << "Osszeguk: " << a+b << "\nSzorzatuk: " << a*b << "\nEzek kulonbsege: " << a*b-(a+b);
 	return 0;
 }
