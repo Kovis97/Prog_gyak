@@ -2,21 +2,18 @@
 using namespace std;
 
 int main() {
-  int negyzet;
+  int negyzet, i=0, j=0;
   cout << "Kérem adja meg a négyzet oldalának hosszát!: ";
   cin >> negyzet;
-  int sor = -negyzet;
-  while (sor <= negyzet) {
-    int oszlop = -negyzet;
-    while (oszlop <= negyzet) {
-      if (negyzet*negyzet >= sor*sor + oszlop*oszlop) 
-        cout << '*';
-      else
-        cout << ' ';
-      oszlop++;      
+  for (i = 1; i <= negyzet; i++)
+  {
+    for (j = 1; j <= negyzet; j++)
+    {
+      if (i == 1 or i == negyzet or j % negyzet == 0)
+        cout << "* ";
+      else cout << "  ";
     }
-  sor += 2;
-  cout << '\n';
+    cout << '\n';
   }
   return 0;
 }
