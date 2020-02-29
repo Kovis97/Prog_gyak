@@ -1,17 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-  int negyzet, i=0, j=0;
+int main()
+{
+  int negyzet, i, j;
   cout << "Kérem adja meg a négyzet oldalának hosszát!: ";
   cin >> negyzet;
-  for (i = 1; i <= negyzet; i++)
+  for (i = 0; i < negyzet; i++)
   {
-    for (j = 1; j <= negyzet; j++)
+    for (j = 0; j < negyzet; j++)
     {
-      if (i == 1 or i == negyzet or j % negyzet == 0)
+      if (j == 0 or i == 0 or negyzet-1 == i or j == negyzet - 1 or j == i or negyzet - j == i+1)
         cout << "* ";
-      else cout << "  ";
+      else
+        cout << "  ";
     }
     cout << '\n';
   }
