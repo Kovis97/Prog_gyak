@@ -1,8 +1,8 @@
 #! /bin/bash
 #set -x
 if [ $# != 2 ]; then
+    echo "Név kiterjesztés nélkül"
     echo "Kapcsoló megadása kötelező, Kapcsolók:"
-    echo " Név kiterjesztés nélkül"
     echo " -f Csak forditas és futtatás"
     echo " -r run"
 else
@@ -11,7 +11,7 @@ else
         -f)g++ -Wall $1.cpp -o $1;
             echo "Forditas sikeres"
             ./$1;;
-        *) echo "hiba" exit;;
+        *) echo "hiba, rosz kapcsoló" exit;;
     esac
 fi
 exit 0;
