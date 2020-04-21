@@ -14,4 +14,3 @@ git config --global user.email "galgoczi.aron97@gmail.com"
 git config --global user.name "Kovis97"
 git status
 git pull origin master
-
