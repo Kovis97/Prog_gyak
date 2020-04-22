@@ -17,7 +17,7 @@ int main() {
   for (int j=0; j<MUTATOK_DB; j++) {
     cin >> szam;
     int i;
-    for (i=0; i<SZAMOK_DB and szamok[i] != szam;i++) {}
+    for (i=0; i<SZAMOK_DB and szamok[i] != szam;i++);
     if (i==SZAMOK_DB){
       mutatok[j] = NULL;
     } else {
