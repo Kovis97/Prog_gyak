@@ -1,7 +1,7 @@
 #include <iostream>
 
-#define SZAMOK_DB 3
-#define MUTATOK_DB 4
+#define SZAMOK_DB 6
+#define MUTATOK_DB 10
 
 using namespace std;
 
@@ -17,9 +17,9 @@ int main() {
   for (int j=0; j<MUTATOK_DB; j++) {
     cin >> szam;
     int i;
-    for (i=0; i<SZAMOK_DB and szamok[i] != szam;i++)
+    for (i=0; i<SZAMOK_DB and szamok[i] != szam;i++) {}
     if (i==SZAMOK_DB){
-      mutatok[j] = 0;
+      mutatok[j] = NULL;
     } else {
       //mutatok[j] = &szamok[i];
       mutatok[j] = szamok+i;
@@ -28,8 +28,8 @@ int main() {
 
   cout << "A mutatok erteke, es az ott levo ertekek:\n";
   for (int j=0;j<MUTATOK_DB;j++) {
-    cout << "A mutatok tomb " << j+1 << ". indexu elemenek tartalma: " << mutatok[j];
-    if (mutatok[j] != 0) {
+    cout << "A mutatok tomb " << j << ". indexu elemenek tartalma: " << mutatok[j];
+    if (mutatok[j] != NULL) {
      cout << ", ezen a cimen tarolt ertek: " << *mutatok[j];
     }
     cout << endl;
