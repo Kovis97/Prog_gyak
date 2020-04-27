@@ -13,9 +13,9 @@ int main() {
   /*mszoveg = new char[strlen(szoveg)+1];
   strcpy(mszoveg,szoveg);
   cout << "a szoveg: "<< szoveg << endl; */
-  if (!(szoveges.length<DB))
+  if (!(szoveges.length()<DB))
   {
-    cout << "A szöveg tul hosszu!";
+    cout << "A szöveg tul hosszu!\n";
     return 0;
   }
   
@@ -26,7 +26,7 @@ int main() {
     return -1;
   }
   
-  strcpy(mszoveg,szoveges.c_str);
+  strcpy(mszoveg,szoveges.c_str());
   cout << "a szoveg: "<< szoveges << endl;
 
   return 0;
