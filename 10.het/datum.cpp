@@ -10,7 +10,7 @@ void beolvas(datum *date)
     cin >> date->nap;
 }
 
-void kiir(datum *date)
+void kiir(const datum *date)
 {
     cout << date->ev << "." << date->ho << "." << date->nap;
 }

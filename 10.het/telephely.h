@@ -9,9 +9,9 @@ struct telep {
   string helyseg;
   datum alapitas;
   int bevetel;
-}
+};
 
 void beolvas(telep*);
-void kiir(telep*);
+void kiir(const telep*);
 
 #endif
