@@ -1,7 +1,7 @@
 #include <iostream>
 #include "ceg.h"
 
-#define CEGDB 3
+#define CEGDB 5
 using namespace std;
 
 int legregebbi(const ceg *cegek)
