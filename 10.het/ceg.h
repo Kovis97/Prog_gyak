@@ -2,6 +2,7 @@
 #define CEG
 
 #include <iostream>
+#include <cstdlib>
 #include "datum.h"
 #include "telephely.h"
 using namespace std;

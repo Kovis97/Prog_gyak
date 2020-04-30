@@ -7,9 +7,9 @@ void beolvas(telep* t){
   cout << "Adja meg az utolso ev ar bevetelet: "; cin >> t->bevetel;
 }
 
-void kiir(telep* t){
+void kiir(const telep* t){
   cout << "A telephely helysege: " << t->helyseg << endl;
-  cout << "Az alapitas datumat: " << endl; 
+  cout << "Az alapitas datumat: "; 
   kiir(&t->alapitas);
-  cout << "/nAz utolso ev ar bevetele: " << t->bevetel << endl;
+  cout << "\nAz utolso ev ar bevetele: " << t->bevetel << endl;
 }
