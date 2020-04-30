@@ -1,3 +1,5 @@
-#inlcude "datum.h"
+#include "datum.h"
 
-void
+void beolvas(datum*) {
+    
+}
