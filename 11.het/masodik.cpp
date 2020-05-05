@@ -4,11 +4,11 @@
 using namespace std;
 
 #define MONODB 2
-#define LETSZAM 5
+#define LETSZAM 10
 #define MAXMAGAS 200
 #define MINMAGAS 50
 #define EV 2020
-#define MAXEV 25
+#define MAXEV 99
 #define EVHATAR 2000
 
 struct adatok
@@ -45,7 +45,7 @@ elem *kerestorol(elem *emberek, int hatar)
     elem *elozo = NULL;
     for (elem *akt = emberek; akt; akt = akt->kov)
     {
-        if (akt->adat.szulev > 2000)
+        if (akt->adat.szulev >= 2000)
         {
             if (akt == emberek)
             {
