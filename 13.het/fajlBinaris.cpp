@@ -38,8 +38,7 @@ int main(int argc, char *argv[])
             cout << "A(z) " << argv[1] << " valoszinuleg binaris\n";
             f.close();
             return 0;
-        }
-        
+        }        
     }
     cout << "A(z) " << argv[1] << " valoszinuleg szoveges\n";
     f.close();
