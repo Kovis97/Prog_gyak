@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#define NEV "faljBeolvas.cpp"
+#define NEV "fajlBeolvas.cpp"
 
 int main() {
     ifstream f(NEV, ios_base::binary);
