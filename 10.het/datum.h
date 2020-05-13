@@ -4,14 +4,15 @@
 #include <iostream>
 using namespace std;
 
-struct datum {
+struct datum
+{
   int ev;
   char ho;
   char nap;
 };
 
-void beolvas(datum*);
-void kiir(const datum*);
-int osszehasonlit(const datum*,const datum*);
+void beolvas(datum *);
+void kiir(const datum *);
+int osszehasonlit(const datum *, const datum *);
 
 #endif

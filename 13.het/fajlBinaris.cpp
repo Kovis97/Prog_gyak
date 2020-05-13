@@ -33,12 +33,12 @@ int main(int argc, char *argv[])
     while (f.get(c))
     {
         i++;
-        if (c<' ' and c!='\n' and c!='\t' and c!='\r' and (c!=26 or i!=meret))
+        if (c < ' ' and c != '\n' and c != '\t' and c != '\r' and (c != 26 or i != meret))
         {
             cout << "A(z) " << argv[1] << " valoszinuleg binaris\n";
             f.close();
             return 0;
-        }        
+        }
     }
     cout << "A(z) " << argv[1] << " valoszinuleg szoveges\n";
     f.close();

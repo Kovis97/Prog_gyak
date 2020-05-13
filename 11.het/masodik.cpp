@@ -51,12 +51,15 @@ elem *kerestorol(elem *emberek, int hatar)
             {
                 delete emberek;
                 emberek = akt->kov;
-            }else {
+            }
+            else
+            {
                 elozo->kov = akt->kov;
                 delete akt;
                 akt = elozo;
             }
-        } else 
+        }
+        else
             elozo = akt;
     }
     return emberek;

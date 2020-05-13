@@ -10,7 +10,7 @@ int main()
   {
     for (j = 0; j < negyzet; j++)
     {
-      if (j == 0 or i == 0 or negyzet-1 == i or j == negyzet - 1 or j == i or negyzet - j == i+1)
+      if (j == 0 or i == 0 or negyzet - 1 == i or j == negyzet - 1 or j == i or negyzet - j == i + 1)
         cout << "* ";
       else
         cout << "  ";

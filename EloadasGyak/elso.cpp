@@ -1,7 +1,8 @@
 // Ez a sor egy megjegyzes
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main() {
-    cout << "Ez  az elso C++ programunk!" << endl ;
-return 0;
+int main()
+{
+    cout << "Ez  az elso C++ programunk!" << endl;
+    return 0;
 }

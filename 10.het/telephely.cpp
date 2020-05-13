@@ -1,15 +1,19 @@
 #include "telephely.h"
 
-void beolvas(telep* t){
-  cout << "A telephely helysege: "; cin >> t->helyseg;
-  cout << "Adja meg az alapitas datumat: "; 
+void beolvas(telep *t)
+{
+  cout << "A telephely helysege: ";
+  cin >> t->helyseg;
+  cout << "Adja meg az alapitas datumat: ";
   beolvas(&t->alapitas);
-  cout << "Adja meg az utolso ev ar bevetelet: "; cin >> t->bevetel;
+  cout << "Adja meg az utolso ev ar bevetelet: ";
+  cin >> t->bevetel;
 }
 
-void kiir(const telep* t){
+void kiir(const telep *t)
+{
   cout << "A telephely helysege: " << t->helyseg << endl;
-  cout << "Az alapitas datumat: "; 
+  cout << "Az alapitas datumat: ";
   kiir(&t->alapitas);
   cout << "\nAz utolso ev ar bevetele: " << t->bevetel << endl;
 }

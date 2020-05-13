@@ -5,7 +5,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     ofstream f(NEV);
     if (f.is_open())
     {
@@ -13,18 +14,24 @@ int main() {
         f << "Juppi!\n";
         f << "Hello Word!\n";
         f.close();
-    } else {
+    }
+    else
+    {
         cerr << "Hiba a fájl létrehozasakor!";
         return 0;
     }
     ifstream fo(NEV);
-    if (fo.is_open()) {
+    if (fo.is_open())
+    {
         string sor;
-        while(getline(fo, sor)) {
+        while (getline(fo, sor))
+        {
             cout << sor << endl;
         }
         fo.close();
-    } else {
+    }
+    else
+    {
         cerr << "Hiba a fajl olvasasakor!";
     }
     return 0;

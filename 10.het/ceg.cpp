@@ -37,12 +37,13 @@ void kiir(const ceg *c)
 {
     cout << "A " << c->nev << " ceg ";
     kiir(&c->alapitas);
-    cout << " alapitasu és\n" << c->telepDb << " telephelyel rendelkezik, ezek adati:\n";
+    cout << " alapitasu és\n"
+         << c->telepDb << " telephelyel rendelkezik, ezek adati:\n";
     for (int i = 0; i < c->telepDb; i++)
     {
-        kiir(c->telephelyek+i);
+        kiir(c->telephelyek + i);
     }
-    cout << "Osszesitett bevetel: " << evesBevetel(c) << endl;    
+    cout << "Osszesitett bevetel: " << evesBevetel(c) << endl;
 }
 
 void torol(const ceg *c)

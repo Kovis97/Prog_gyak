@@ -6,7 +6,7 @@ using namespace std;
 
 int legregebbi(const ceg *cegek)
 {
-  int min=0;
+  int min = 0;
   const datum *alapit = &cegek->alapitas;
   for (int i = 1; i < CEGDB; i++)
   {
@@ -34,7 +34,7 @@ int main()
   cout << "Telephely adatok kiirasa helyseg nev alapjan ures sorig!";
   cin.ignore();
   string helyseg;
-  while (cout << "\n\nHelyseg: ", getline(cin,helyseg), helyseg.length() > 0)
+  while (cout << "\n\nHelyseg: ", getline(cin, helyseg), helyseg.length() > 0)
   {
     for (int c = 0; c < CEGDB; c++)
     {

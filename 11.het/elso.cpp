@@ -23,7 +23,7 @@ elem *letrehoz()
 
 void kiir(elem *horgony)
 {
-    elem* akt = horgony;
+    elem *akt = horgony;
     while (akt != NULL)
     {
         cout << akt->szam << "\t";
@@ -76,7 +76,7 @@ int main()
     cout << "Tömb elemeinke forditott kiirasa!\n";
     elem *horgony = letrehoz();
     kiir(horgony);
-   
+
     horgony = beszurElore(horgony, 42);
     kiir(horgony);
     horgony = beszurHatra(horgony, 52);
