@@ -1,6 +1,7 @@
 #include <iostream>
-#include <ctime>
 #include <stdlib.h>
+#include <time.h>
+
 using namespace std;
 
 #define MAX_DB 10
@@ -17,8 +18,8 @@ struct gitar
 
 gitar *general()
 {
+    gitar *lista = NULL;
     int gitardb = rand() % MAX_DB;
-    gitar *gitarok = NULL;
     for (int i = 0; i < gitardb; i++)
     {
         gitar *uj = new gitar;
@@ -27,10 +28,10 @@ gitar *general()
             uj->hurok_szama = 12;
         uj->ar = MIN_AR + rand() % MAX_AR - MIN_AR + 1;
         uj->hangszedo = rand() % 2 ? "humbucker" : "single coil";
-        uj->kov = gitarok;
-        gitarok = uj;
+        uj->kov = lista;
+        lista = uj;
     }
-    return gitarok;
+    return lista;
 }
 
 gitar *hozzafuz(gitar *lista, int hurok_szama, int ar, string hangszedo)
@@ -59,24 +60,25 @@ gitar *hozzafuz(gitar *lista, int hurok_szama, int ar, string hangszedo)
 gitar *szures(gitar *lista)
 {
     gitar *szurt = NULL;
-    gitar *szurtkov;
+    gitar *szurtUtolso;
     for (gitar *akt = lista; akt; akt = akt->kov)
     {
         if ((akt->hurok_szama == 6 and akt->hangszedo == "single coil") or (akt->hurok_szama == 8 and akt->hangszedo == "humbucker"))
         {
+            gitar *uj = new gitar;
+            uj->ar = akt->ar;
+            uj->hurok_szama = akt->hurok_szama;
+            uj->hangszedo = akt->hangszedo;
+            uj->kov = NULL;
             if (szurt == NULL)
             {
-                szurt = akt;
-                szurtkov = szurt;
+                szurt = uj;
             }
             else
             {
-                gitar *uj = new gitar;
-                uj = akt;
-                uj->kov = NULL;
-                szurt->kov = uj;
-                szurt = uj;
+                szurtUtolso->kov = uj;
             }
+            szurtUtolso = uj;
         }
     }
     return szurt;
@@ -84,49 +86,59 @@ gitar *szures(gitar *lista)
 
 gitar *draga(gitar *lista)
 {
-    int atlag = 0;
+    double atlag = 0.0;
     int db = 0;
     for (gitar *akt = lista; akt; akt = akt->kov)
     {
-        atlag += akt->ar;
         db++;
+        atlag += akt->ar;
     }
-    atlag = atlag / db;
+    atlag /= db;
     gitar *dragabb = NULL;
     for (gitar *akt = lista; akt; akt = akt->kov)
     {
         if (akt->ar > atlag)
         {
             gitar *uj = new gitar;
-            uj = akt;
-            uj->kov = dragabb;
+            uj->ar = akt->ar;
+            uj->hurok_szama = akt->hurok_szama;
+            uj->hangszedo = akt->hangszedo;
+            uj->kov = NULL;
+            if (dragabb == NULL)
+            {
+                dragabb = uj;
+            }
+            else
+            {
+                uj->kov = dragabb;
+            }
             dragabb = uj;
         }
-
-        db++;
     }
     return dragabb;
 }
 
 gitar *olcso(gitar *lista)
 {
-    int min_ar = MAX_AR + 1;
-    gitar *akt = lista;
-    gitar *legolcsobb = new gitar;
-    while (akt != NULL)
+    int minAr = MAX_AR + 1;
+    gitar *olcso = NULL;
+    if (lista == NULL)
     {
-        if (akt->hurok_szama == 12 and akt->ar < min_ar)
-        {
-            min_ar = akt->ar;
-            legolcsobb = new gitar;
-            legolcsobb->ar = akt->ar;
-            legolcsobb->hurok_szama = akt->hurok_szama;
-            legolcsobb->hangszedo = akt->hangszedo;
-            legolcsobb->kov = NULL;
-        }
-        akt = akt->kov;
+        return NULL;
     }
-    return legolcsobb;
+    for (gitar *akt = lista; akt; akt = akt->kov)
+    {
+        if (akt->hurok_szama == 12 and akt->ar < minAr)
+        {
+            minAr = akt->ar;
+            olcso = new gitar,
+            olcso->ar = akt->ar;
+            olcso->hurok_szama = akt->hurok_szama;
+            olcso->hangszedo = akt->hangszedo;
+            olcso->kov;
+        }
+    }
+    return olcso;
 }
 
 void kiir(gitar *g)
