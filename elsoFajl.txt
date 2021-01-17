@@ -1,0 +1,3 @@
+Ezt a fajlt C++ nyelven irt programmal hoztam letre!
+Juppi!
+Hello Word!
